@@ -27,8 +27,8 @@ namespace AliFinancialService
             this.setStatusIcon();
 
             //this.lbAppStartTime.Text = DateTime.Now.ToString();
-            //this.ckbAutoStartService.Checked = Convert.ToBoolean(
-            //    CustomConfig._EnableAutoStartService);
+            this.ckbAutoStartService.Checked = Convert.ToBoolean(
+                CustomConfig._EnableAutoStartService);
             #endregion
         }
 

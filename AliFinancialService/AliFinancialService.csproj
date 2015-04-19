@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{DFFB1497-4047-48BB-8002-27C1CF5D0EC8}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>AliFinancialService</RootNamespace>
     <AssemblyName>AliFinancialService</AssemblyName>
@@ -34,6 +34,9 @@
   <PropertyGroup>
     <ApplicationIcon>app.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -48,6 +51,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="business\AliBusiness.cs" />
+    <Compile Include="business\AliCache.cs" />
     <Compile Include="controller\FrmMainController.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,12 +65,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="threads\AliThread.cs" />
     <Compile Include="threads\AppTimer.cs" />
     <Compile Include="threads\TestBusinessThread.cs" />
     <Compile Include="threads\ThreadAbstract.cs" />
+    <Compile Include="threads\ThreadManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="wcfbehavior\CustomBehavior.cs" />
     <Compile Include="wcfhost\Host.cs" />
+    <Compile Include="wcfinterface\IAli.cs" />
     <Compile Include="wcfinterface\ITest.cs" />
+    <Compile Include="wcfservices\Ali.cs" />
     <Compile Include="wcfservices\Test.cs" />
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
@@ -94,6 +105,10 @@
     <EmbeddedResource Include="app.ico" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Ali.Model\Ali.Model.csproj">
+      <Project>{b26440c9-cdb8-4171-ad28-4328a60cb4ff}</Project>
+      <Name>Ali.Model</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Foundation.Core\Foundation.Core.csproj">
       <Project>{398b7fee-94cd-4f66-a5b4-180f8e443c83}</Project>
       <Name>Foundation.Core</Name>

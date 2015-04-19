@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading;
-using WSSocket;
 
 namespace AliFinancialService.threads
 {
     class ThreadManager
     {
         private static IList<AbstractThread> _threads = null;
+        /*
         private static TcpServerEx _tcpFlashAuthServer = null;
         public static TcpServerEx _tcpMsgServer = null;
-
+        */
         /// <summary>
         /// 
         /// </summary>
@@ -22,10 +22,6 @@ namespace AliFinancialService.threads
             foreach (AbstractThread thd in _threads)
                 thd._Status = ThreadStatus.Started;
 
-            if (!_tcpFlashAuthServer._IsSuccessStarted)
-                _tcpFlashAuthServer.StartListen(843);
-            if (!_tcpMsgServer._IsSuccessStarted)
-                _tcpMsgServer.StartListen(1818);
 
             #endregion
         }
@@ -46,13 +42,15 @@ namespace AliFinancialService.threads
             {
                 _threads = new List<AbstractThread>();
 
+                /*
                 _threads.Add(new AppTimer(false)
                 {
                     _FrmMain = frmMain
                 });
                 _threads.Add(new DBTimerThread(false));
-                _threads.Add(new TestBusinessThread(true));
-                _threads.Add(new IndexThread(true));
+                 * */
+
+                _threads.Add(new AliThread(false));
                 foreach (AbstractThread thd in _threads)
                 {
                     Thread temp = new Thread(new ThreadStart(thd.Start));
@@ -60,6 +58,7 @@ namespace AliFinancialService.threads
                     temp.Start();
                 }
             }
+            /*
             if (_tcpFlashAuthServer == null)
             {
                 _tcpFlashAuthServer = new TcpServerEx();
@@ -70,6 +69,7 @@ namespace AliFinancialService.threads
                 _tcpMsgServer = new TcpServerEx();
                 _tcpMsgServer._Receiver = new WSServerSwitcher();
             }
+             * */
             #endregion
         }
     }

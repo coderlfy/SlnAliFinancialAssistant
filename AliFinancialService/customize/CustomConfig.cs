@@ -59,7 +59,7 @@ namespace AliFinancialService.customize
 
         public static void Init()
         {
-            Config.Get(_KeyNameServiceURL, ref _defaultServiceURL);
+            //Config.Get(_KeyNameServiceURL, ref _defaultServiceURL);
             Config.Get(_KeyNameLogDirectory, ref _logDirectoryName);
             Config.Get(_KeyNameEnableAutoStartService, ref _enableAutoStartService);
         }

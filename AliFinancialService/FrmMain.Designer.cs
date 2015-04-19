@@ -43,6 +43,7 @@
             this.ckbAutoStartService.TabIndex = 0;
             this.ckbAutoStartService.Text = "程序启动即启动服务";
             this.ckbAutoStartService.UseVisualStyleBackColor = true;
+            this.ckbAutoStartService.CheckedChanged += new System.EventHandler(this.ckbAutoStartService_CheckedChanged);
             // 
             // btnStartService
             // 
@@ -53,6 +54,7 @@
             this.btnStartService.TabIndex = 1;
             this.btnStartService.Text = "开启服务";
             this.btnStartService.UseVisualStyleBackColor = true;
+            this.btnStartService.Click += new System.EventHandler(this.btnStartService_Click);
             // 
             // FrmMain
             // 
