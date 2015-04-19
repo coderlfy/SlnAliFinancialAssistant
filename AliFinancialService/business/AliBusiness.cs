@@ -17,6 +17,7 @@ namespace AliFinancialService
             if (AliCache._CurrentRate != null)
             {
                 jsonhlp.AddObjectToJson("success", "true");
+                //ceshi tijiao
                 CurrentRate rate = AliCache._CurrentRate;
                 jsonhlp.AddObjectToJson(CurrentRate.KeyNameFetchTime, rate._FetchTime.ToString("yyyy-MM-dd HH:mm:ss"));
                 jsonhlp.AddObjectToJson(CurrentRate.KeyNameMonth1To6, getMonthRate(rate._Month1To6));
