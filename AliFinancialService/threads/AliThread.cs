@@ -27,7 +27,7 @@ namespace AliFinancialService.threads
                     AliCache._CurrentRate._FetchTime = DateTime.Now;
                     AliCache._CurrentRate._Month1To6 = 4.57M;
                     AliCache._CurrentRate._Month6To12 = 5.55M;
-                    AliCache._CurrentRate._Month6To12 = 6.32M;
+                    AliCache._CurrentRate._Month12To24 = 6.32M;
                 //}
                 
             }, secondsinterval);
