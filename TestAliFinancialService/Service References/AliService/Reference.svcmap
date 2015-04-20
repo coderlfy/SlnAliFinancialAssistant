@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="43dd6bd6-607c-4185-843f-bf609524b5b7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Iali" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="IAli.xsd" MetadataType="Schema" ID="52c0eb13-9590-41d9-9d85-39fc480803be" SourceId="1" SourceUrl="http://localhost:8733/IAli?xsd=xsd0" />
+    <MetadataFile FileName="IAli.disco" MetadataType="Disco" ID="ac74c7bc-4b20-40b1-9807-66a55d413ca9" SourceId="1" SourceUrl="http://localhost:8733/IAli?disco" />
+    <MetadataFile FileName="WCFService.wsdl" MetadataType="Wsdl" ID="5b29e3fe-aa72-4317-b03d-b4fa1924af53" SourceId="1" SourceUrl="http://localhost:8733/IAli?wsdl" />
+    <MetadataFile FileName="IAli1.xsd" MetadataType="Schema" ID="589c66e2-c2db-4e98-ac06-3f6b5f1d6827" SourceId="1" SourceUrl="http://localhost:8733/IAli?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
