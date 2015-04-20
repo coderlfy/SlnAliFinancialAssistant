@@ -1,11 +1,11 @@
-﻿using HtmlAgilityPack;
-using MoneyCalculator.Helpers;
+﻿using HtmlAgilityPack; 
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
+using UtliHelper;
 
 namespace MoneyCalculator
 {
