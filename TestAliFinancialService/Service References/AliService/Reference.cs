@@ -17,6 +17,12 @@ namespace TestAliFinancialService.AliService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAli/GetJsonCurrentRate", ReplyAction="http://tempuri.org/IAli/GetJsonCurrentRateResponse")]
         string GetJsonCurrentRate();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAli/GetJsonClawlerDisableTime", ReplyAction="http://tempuri.org/IAli/GetJsonClawlerDisableTimeResponse")]
+        string GetJsonClawlerDisableTime();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAli/SetClawlerDisableTime", ReplyAction="http://tempuri.org/IAli/SetClawlerDisableTimeResponse")]
+        string SetClawlerDisableTime(string timeMode1Str, string timeMode2Str);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -48,6 +54,14 @@ namespace TestAliFinancialService.AliService {
         
         public string GetJsonCurrentRate() {
             return base.Channel.GetJsonCurrentRate();
+        }
+        
+        public string GetJsonClawlerDisableTime() {
+            return base.Channel.GetJsonClawlerDisableTime();
+        }
+        
+        public string SetClawlerDisableTime(string timeMode1Str, string timeMode2Str) {
+            return base.Channel.SetClawlerDisableTime(timeMode1Str, timeMode2Str);
         }
     }
 }

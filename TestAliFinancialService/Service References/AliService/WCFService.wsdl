@@ -12,16 +12,54 @@
   <wsdl:message name="IAli_GetJsonCurrentRate_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetJsonCurrentRateResponse" />
   </wsdl:message>
+  <wsdl:message name="IAli_GetJsonClawlerDisableTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJsonClawlerDisableTime" />
+  </wsdl:message>
+  <wsdl:message name="IAli_GetJsonClawlerDisableTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJsonClawlerDisableTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAli_SetClawlerDisableTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetClawlerDisableTime" />
+  </wsdl:message>
+  <wsdl:message name="IAli_SetClawlerDisableTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetClawlerDisableTimeResponse" />
+  </wsdl:message>
   <wsdl:portType name="IAli">
     <wsdl:operation name="GetJsonCurrentRate">
       <wsdl:input wsaw:Action="http://tempuri.org/IAli/GetJsonCurrentRate" message="tns:IAli_GetJsonCurrentRate_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAli/GetJsonCurrentRateResponse" message="tns:IAli_GetJsonCurrentRate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJsonClawlerDisableTime">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAli/GetJsonClawlerDisableTime" message="tns:IAli_GetJsonClawlerDisableTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAli/GetJsonClawlerDisableTimeResponse" message="tns:IAli_GetJsonClawlerDisableTime_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetClawlerDisableTime">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAli/SetClawlerDisableTime" message="tns:IAli_SetClawlerDisableTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAli/SetClawlerDisableTimeResponse" message="tns:IAli_SetClawlerDisableTime_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IAli" type="tns:IAli">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="GetJsonCurrentRate">
       <soap:operation soapAction="http://tempuri.org/IAli/GetJsonCurrentRate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJsonClawlerDisableTime">
+      <soap:operation soapAction="http://tempuri.org/IAli/GetJsonClawlerDisableTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetClawlerDisableTime">
+      <soap:operation soapAction="http://tempuri.org/IAli/SetClawlerDisableTime" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

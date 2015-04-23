@@ -57,6 +57,7 @@ namespace AliFinancialService
         {
             #region
             AliCache.Update(timeMode1Str, timeMode2Str);
+            AliCache._CrawlerRuntime.GetRuntime(timeMode1Str, timeMode2Str);
             return JsonHelper.GetOnlySucessJson(true);
             #endregion
         }

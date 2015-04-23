@@ -93,6 +93,8 @@ namespace Ali.Model
             object time1, object time2)
         {
             #region
+            this._disableTime1.Clear();
+            this._disableTime2.Clear();
             if (time1 != null &&
                 !string.IsNullOrEmpty(time1.ToString()))
             {
