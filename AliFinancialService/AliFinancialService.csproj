@@ -113,6 +113,10 @@
       <Project>{398b7fee-94cd-4f66-a5b4-180f8e443c83}</Project>
       <Name>Foundation.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\UtliHelper\UtliHelper.csproj">
+      <Project>{d4dc7385-ef8c-4e8b-b40f-84de3c69b1d3}</Project>
+      <Name>UtliHelper</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="common\" />
