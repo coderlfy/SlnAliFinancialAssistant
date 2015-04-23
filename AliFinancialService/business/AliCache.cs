@@ -16,8 +16,8 @@ namespace AliFinancialService
 
         public static CrawlerRuntime _CrawlerRuntime = null;
 
-        public static object _CrawlerDisableRuntimeMode1 = null;
-        public static object _CrawlerDisableRuntimeMode2 = null;
+        public static object _CrawlerDisableRuntimeMode1 = "2015-4-24 09:30:00~2015-4-24 09:50:00~true";
+        public static object _CrawlerDisableRuntimeMode2 = "";
 
         public static void Get()
         {
@@ -30,6 +30,18 @@ namespace AliFinancialService
                 _CrawlerRuntime = new CrawlerRuntime();
                 _CrawlerRuntime.GetRuntime(_CrawlerDisableRuntimeMode1, _CrawlerDisableRuntimeMode2);
             }
+            #endregion
+        }
+
+        public static void Update(
+            object disableModeTime1, 
+            object disableModeTime2)
+        {
+            #region
+            Config.Update(_KeyNameCrawlerDisableRuntimeMode1, ref disableModeTime1);
+            _CrawlerDisableRuntimeMode1 = disableModeTime1;
+            Config.Update(_KeyNameCrawlerDisableRuntimeMode2, ref disableModeTime2);
+            _CrawlerDisableRuntimeMode2 = disableModeTime2;
             #endregion
         }
     }

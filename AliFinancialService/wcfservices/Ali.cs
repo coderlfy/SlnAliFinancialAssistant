@@ -32,5 +32,16 @@ namespace AliFinancialService
                     .GetJsonClawlerDisableTime();
             });
         }
+
+
+        public string SetClawlerDisableTime(
+            string timeMode1Str, string timeMode2Str)
+        {
+            return JsonException.Wrap(() =>
+            {
+                return new AliBusiness()
+                    .SetClawlerDisableTime(timeMode1Str, timeMode2Str);
+            });
+        }
     }
 }

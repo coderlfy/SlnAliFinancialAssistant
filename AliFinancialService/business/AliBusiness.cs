@@ -51,5 +51,14 @@ namespace AliFinancialService
             return jsonhlp.ToString();
             #endregion
         }
+
+        internal string SetClawlerDisableTime(
+            string timeMode1Str, string timeMode2Str)
+        {
+            #region
+            AliCache.Update(timeMode1Str, timeMode2Str);
+            return JsonHelper.GetOnlySucessJson(true);
+            #endregion
+        }
     }
 }
