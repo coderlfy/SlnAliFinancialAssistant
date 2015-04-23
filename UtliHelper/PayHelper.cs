@@ -1,13 +1,13 @@
-﻿using HtmlAgilityPack; 
+﻿using HtmlAgilityPack;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
-using UtliHelper;
 
-namespace MoneyCalculator
+
+namespace UtliHelper
 {
     public class PayHelper
     {
@@ -39,7 +39,7 @@ namespace MoneyCalculator
         /// </summary>
         /// <param name="rootNode"></param>
         /// <returns></returns>
-        public static List<string> GetPayInfo()
+        private static List<string> GetPayStringInfo()
         {
             result.Clear();
             string html = GetHtmlStr(url);
@@ -55,8 +55,19 @@ namespace MoneyCalculator
             {
                 result.Add(HttpHelper.RemoveFormat(item.InnerText));
             }
-
             return result;
+        }
+        public static List<decimal> GetPayInfo()
+        {
+            List<decimal> data = new List<decimal>();
+            List<string> info = GetPayStringInfo();
+            foreach (var item in info)
+            {
+                decimal temp = 4.5M;
+                decimal.TryParse(item.Replace("%", "").Replace("起", ""), out temp);
+                data.Add(temp);
+            }
+            return data;
         }
 
         public static string GetPayJsonInfo()
@@ -64,7 +75,7 @@ namespace MoneyCalculator
             string json = string.Empty;
             try
             {
-                List<string> infos = GetPayInfo();
+                List<string> infos = GetPayStringInfo();
 
                 StringBuilder sb = new StringBuilder();
                 sb.Append("{");
