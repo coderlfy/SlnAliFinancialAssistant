@@ -22,5 +22,15 @@ namespace AliFinancialService
             return string.Format("{1} 恭喜您测试接口已连通 {0}", value, DateTime.Now);
              * */
         }
+
+
+        public string GetJsonClawlerDisableTime()
+        {
+            return JsonException.Wrap(() =>
+            {
+                return new AliBusiness()
+                    .GetJsonClawlerDisableTime();
+            });
+        }
     }
 }

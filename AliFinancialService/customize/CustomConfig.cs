@@ -57,11 +57,17 @@ namespace AliFinancialService.customize
             get { return Assembly.GetExecutingAssembly().GetName().Version.ToString(); }
         }
 
+
+
+
+
         public static void Init()
         {
             //Config.Get(_KeyNameServiceURL, ref _defaultServiceURL);
             Config.Get(_KeyNameLogDirectory, ref _logDirectoryName);
             Config.Get(_KeyNameEnableAutoStartService, ref _enableAutoStartService);
+
+            AliCache.Get();
         }
     }
 }

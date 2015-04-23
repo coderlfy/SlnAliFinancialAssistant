@@ -38,5 +38,18 @@ namespace AliFinancialService
             return string.Format("{0}%", rate);
             #endregion
         }
+
+        internal string GetJsonClawlerDisableTime()
+        {
+            #region
+            JsonHelper jsonhlp = new JsonHelper();
+            jsonhlp.AddObjectToJson("success", "true");
+            jsonhlp.AddObjectToJson(AliCache._KeyNameCrawlerDisableRuntimeMode1,
+                AliCache._CrawlerDisableRuntimeMode1 == null ? "" : AliCache._CrawlerDisableRuntimeMode1.ToString());
+            jsonhlp.AddObjectToJson(AliCache._KeyNameCrawlerDisableRuntimeMode2,
+                AliCache._CrawlerDisableRuntimeMode2 == null ? "" : AliCache._CrawlerDisableRuntimeMode2.ToString());
+            return jsonhlp.ToString();
+            #endregion
+        }
     }
 }

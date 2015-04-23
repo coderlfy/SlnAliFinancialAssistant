@@ -11,5 +11,8 @@ namespace AliFinancialService
     {
         [OperationContract]
         string GetJsonCurrentRate();
+
+        [OperationContract]
+        string GetJsonClawlerDisableTime();
     }
 }
