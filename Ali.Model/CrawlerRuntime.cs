@@ -157,7 +157,12 @@ namespace Ali.Model
                     if (time < t._MinTime || time > t._MaxTime)
                         continue;
                     else
+                    {
+                        Console.WriteLine("当前时刻：{0}，被参数{1}~{2}时禁止爬取！", 
+                            time, t._MinTime, t._MaxTime);
                         return false;
+                    }
+                        
             }
 
             foreach (CrawlerDisableTimeMode2 t in this._disableTime2)
@@ -167,7 +172,12 @@ namespace Ali.Model
                         || time > t._MiddleTime.AddMinutes(0 - t._FuzzyMinutes))
                         continue;
                     else
+                    {
+                        Console.WriteLine("当前时刻：{0}，被参数{1}左右{2}分钟时禁止爬取！", 
+                            time, t._MiddleTime, t._FuzzyMinutes);
                         return false;
+                    }
+                        
             }
 
             return true;
