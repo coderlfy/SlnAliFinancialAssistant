@@ -168,8 +168,8 @@ namespace Ali.Model
             foreach (CrawlerDisableTimeMode2 t in this._disableTime2)
             {
                 if (t._Usable)
-                    if (time < t._MiddleTime.AddMinutes(t._FuzzyMinutes)
-                        || time > t._MiddleTime.AddMinutes(0 - t._FuzzyMinutes))
+                    if (time > t._MiddleTime.AddMinutes(t._FuzzyMinutes)
+                        || time < t._MiddleTime.AddMinutes(0 - t._FuzzyMinutes))
                         continue;
                     else
                     {
