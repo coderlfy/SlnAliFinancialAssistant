@@ -19,6 +19,7 @@ namespace AliFinancialService.threads
             {
                 if (AliCache._CrawlerRuntime.Enable(DateTime.Now))
                 {
+                    Console.WriteLine("{0}爬取招财宝利率！", DateTime.Now);
                     List<decimal> data = UtliHelper.PayHelper.GetPayInfo();
                     if (data != null)
                     {

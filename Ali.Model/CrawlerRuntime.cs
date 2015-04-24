@@ -99,6 +99,7 @@ namespace Ali.Model
                 !string.IsNullOrEmpty(time1.ToString()))
             {
                 string[] times = time1.ToString().Split(',');
+
                 foreach (string t in times)
                 {
                     string[] stmp = t.Split('~');

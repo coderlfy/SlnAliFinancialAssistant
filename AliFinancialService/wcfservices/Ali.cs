@@ -39,6 +39,7 @@ namespace AliFinancialService
         {
             return JsonException.Wrap(() =>
             {
+                Console.WriteLine("{0}配置了禁止爬取网站参数！", DateTime.Now);
                 return new AliBusiness()
                     .SetClawlerDisableTime(timeMode1Str, timeMode2Str);
             });
