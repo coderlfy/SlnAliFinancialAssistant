@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="business\AliBusiness.cs" />
     <Compile Include="business\AliCache.cs" />
+    <Compile Include="business\KeyManagerBusiness.cs" />
     <Compile Include="controller\FrmMainController.cs">
       <SubType>Form</SubType>
     </Compile>

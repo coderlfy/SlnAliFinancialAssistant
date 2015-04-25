@@ -17,5 +17,8 @@ namespace AliFinancialService
         [OperationContract]
         string SetClawlerDisableTime(
             string timeMode1Str, string timeMode2Str);
+        [OperationContract]
+        string GetRegisterCode(
+            string key, string userInfor);
     }
 }

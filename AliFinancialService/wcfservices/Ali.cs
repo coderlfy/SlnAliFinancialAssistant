@@ -44,5 +44,19 @@ namespace AliFinancialService
                     .SetClawlerDisableTime(timeMode1Str, timeMode2Str);
             });
         }
+
+
+        public string GetRegisterCode(
+            string key, string userInfor)
+        {
+            return JsonException.Wrap(() =>
+            {
+                Console.WriteLine("{0}用户生成了key！", DateTime.Now);
+
+                Console.WriteLine("userInfor={0}！", userInfor);
+                return new KeyManagerBusiness()
+                    .GetJsonRegisterCode(key, userInfor);
+            });
+        }
     }
 }
